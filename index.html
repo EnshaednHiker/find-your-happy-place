@@ -20,64 +20,64 @@
         <div class="row justify-content-md-center">
 
 
-            <h1><span id="welcome-txt-pt1">Welcome. </span></span id="welcome-txt-pt2">Find your happy place.</span>
+            <h1 class="landing-page-text"><span id="welcome-txt-pt1">Welcome. </span></span id="welcome-txt-pt2">Find your happy place.</span>
             </h1><span></div>
 </header>
 
 <div class="landing-page">      
     <div class="container">
-        <form class="">
-            <div class="row">   
+        <form required id="landing-page-form"> 
+            <!--<div class="row">   
                 <div class="col col-sm-6 col-xs-12">
                     <label for="">You have to know where you are...</label>
                     <input type="text" class="form-control" name="home-search" placeholder="Enter your location here">
                 </div>
-            </div>      
+            </div>      -->
             <div class="row">
                 <div class="col col-sm-6 col-xs-12">
-                    <label for="Happy Place Criteria">...to know where you want to go.</label>
-                    <select class="continent-select form-control">
-                        <option selected>Choose a continent</option>
-                        <option value="1">North America</option>
-                        <option value="2">South America</option>
-                        <option value="3">Europe</option>
-                        <option value="4">Africa</option>
-                        <option value="5">Asia</option>
-                        <option value="6">Australia</option>
-                        <option value="7">All continents (except Antarctica)</option>
+                    <label class="landing-page-text" for="Happy Place Criteria">Where you want to go, to your heart's content.</label> <!--...to know where you want to go.-->
+                    <select required form="landing-page-form" id="continent-selection" name="continent-select-data" class="continent-select form-control">
+                        <option value="" selected>Choose a continent</option>
+                        <option data-continent="North America">North America</option>
+                        <option data-continent="South America">South America</option>
+                        <option data-continent="Europe">Europe</option>
+                        <option data-continent="Africa">Africa</option>
+                        <option data-continent="Asia">Asia</option>
+                        <option data-continent="Australia">Australia</option>
+                        <option data-continent="All continents (except Antarctica)">All continents (except Antarctica)</option>
                     </select>
                 </div> 
             </div>
 
             <div class="row">
                     <div class="col col-sm-6 col-xs-12">
-                        <select class="temp-select form-control" id="temp-range">
-                            <option selected>Temp Range</option>
-                            <option value="1">Arctic (19F and under/-7.2C and under)</option>
-                            <option value="2">Freezing (20F to 32F/-6.7C to 0C)</option>
-                            <option value="3">Cold (33F to 45F/0.1C to 7.2C)</option>
-                            <option value="4">Cool (46F to 55F/7.3C to 12.8C)</option>
-                            <option value="5">Brisk (56F to 65F/12.9C to 18.3C)</option>
-                            <option value="6">Warm (66F to 75F/18.4C to 23.9C)</option>
-                            <option value="7">Hot (76F to 85F/24.0C to 29.4C)</option>
-                            <option value="8">Stifling (86F to 95F/29.5C to 35C)</option>
-                            <option value="9">Fry an egg (96F+/35.1C+)</option>
+                        <select required form="landing-page-form" name="temp-select-data" class="temp-select form-control" id="temp-selection">
+                            <option value="" selected>Temp Range in Fahrenheit/Celsius Approximated</option>
+                            <option data-range-begin="-200" data-range-end="19">Arctic (19F and under/-7.2C and under)</option>
+                            <option data-range-begin="20" data-range-end="32">Freezing (20F to 32F/-6.7C to 0C)</option>
+                            <option data-range-begin="33" data-range-end="40">Cold (33F to 40F/0.1C to 4.4C)</option>
+                            <option data-range-begin="41" data-range-end="50">Cool (41F to 50F/5C to 10C)</option>
+                            <option data-range-begin="51" data-range-end="60">Brisk (51F to 60F/10.6C to 15.5C)</option>
+                            <option data-range-begin="61" data-range-end="70">Warm (61F to 70F/16.1C to 21.1C)</option>
+                            <option data-range-begin="71" data-range-end="85">Hot (71F to 85F/21.7C to 29.4C)</option>
+                            <option data-range-begin="86" data-range-end="95">Stifling (86F to 95F/30C to 35C)</option>
+                            <option data-range-begin="96" data-range-end="200">Fry an egg (96F+/35.1C+)</option>
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col col-sm-6 col-xs-12">
-                        <select class="sun-select form-control" id="sun-range">
-                            <option selected>Sunniness</option>
-                            <option value="32">Sunny</option>
-                            <option value="30">Partly Cloudy</option>
-                            <option value="28">Mostly Cloudy</option>
-                            <option value="26">Cloudy</option>
+                        <select required form="landing-page-form" name="sunniness-select-data" class="sun-select form-control" id="sunniness-selection">
+                            <option value="" selected>Sunniness</option>
+                            <option data-sunniness="32">Sunny</option>
+                            <option data-sunniness="30">Partly Cloudy</option>
+                            <option data-sunniness="28">Mostly Cloudy</option>
+                            <option data-sunniness="26">Cloudy</option>
                         </select>
                     </div>
                     <div class="col col-sm-6 col-xs-12" >
-                        <input type="submit" class="button col col-xs-6" value="Take Off">
-                        <input type="button" class="button col col-xs-6" value="Start Over">
+                        <input type="submit" class="button col col-xs-6" id="js-take-off-button" value="Take Off"> 
+                        <input type="button" class="button col col-xs-6" id="js-start-over-button"value="Start Over">
                     </div>
                 </div>    
         </form>
@@ -88,6 +88,9 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
     <script src="Scripts/geography.js" type="text/javascript"></script>
     <script src="Scripts/app.js" type="text/javascript"></script>
 
