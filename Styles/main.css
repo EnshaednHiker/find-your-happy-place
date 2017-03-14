@@ -1,0 +1,38 @@
+ html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("sky.jpg");
+    background-size: cover;
+    
+}
+
+.landing-page .button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+.landing-page {
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+.landing-page .row{
+    padding-top: 10px;
+    
+}
+.landing-page .row .form-control {
+    height: 50px;
+}
+
+
+

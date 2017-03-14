@@ -12,29 +12,81 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
     <link href="styles/main.css" rel="stylesheet">
+
 </head>
-<header>
-    <h1><span>Welcome. </span></span>Find your happy place</span></h1><span>
-</header>
+
 <body>
+    <header class="container">
+        <div class="row justify-content-md-center">
 
 
-<div>
-    <select class="custom-select">
-  <option selected>Choose a continent to narrow your happy place search</option>
-  <option value="1">North America</option>
-  <option value="2">South America</option>
-  <option value="3">Europe</option>
-  <option value="4">Africa</option>
-  <option value="5">Asia</option>
-  <option value="6">Australia</option>
-</select>
+            <h1><span id="welcome-txt-pt1">Welcome. </span></span id="welcome-txt-pt2">Find your happy place.</span>
+            </h1><span></div>
+</header>
+
+<div class="landing-page">      
+    <div class="container">
+        <form class="">
+            <div class="row">   
+                <div class="col col-sm-6 col-xs-12">
+                    <label for="">You have to know where you are...</label>
+                    <input type="text" class="form-control" name="home-search" placeholder="Enter your location here">
+                </div>
+            </div>      
+            <div class="row">
+                <div class="col col-sm-6 col-xs-12">
+                    <label for="Happy Place Criteria">...to know where you want to go.</label>
+                    <select class="continent-select form-control">
+                        <option selected>Choose a continent</option>
+                        <option value="1">North America</option>
+                        <option value="2">South America</option>
+                        <option value="3">Europe</option>
+                        <option value="4">Africa</option>
+                        <option value="5">Asia</option>
+                        <option value="6">Australia</option>
+                        <option value="7">Every continent minus Antarctica</option>
+                    </select>
+                </div> 
+            </div>
+
+            <div class="row">
+                    <div class="col col-sm-6 col-xs-12">
+                        <select class="temp-select form-control" id="temp-range">
+                            <option selected>Temp Range</option>
+                            <option value="1">Arctic (19F and under/-7.2C and under)</option>
+                            <option value="2">Freezing (20F to 32F/-6.7C to 0C)</option>
+                            <option value="3">Cold (33F to 45F/0.1C to 7.2C)</option>
+                            <option value="4">Cool (46F to 55F/7.3C to 12.8C)</option>
+                            <option value="5">Brisk (56F to 65F/12.9C to 18.3C)</option>
+                            <option value="6">Warm (66F to 75F/18.4C to 23.9C)</option>
+                            <option value="7">Hot (76F to 85F/24.0C to 29.4C)</option>
+                            <option value="8">Stifling (86F to 95F/29.5C to 35C)</option>
+                            <option value="9">Fry an egg (96F+/35.1C+)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-sm-6 col-xs-12">
+                        <select class="sun-select form-control" id="sun-range">
+                            <option selected>Sunniness</option>
+                            <option value="32">Sunny</option>
+                            <option value="30">Partly Cloudy</option>
+                            <option value="28">Mostly Cloudy</option>
+                            <option value="26">Cloudy</option>
+                        </select>
+                    </div>
+                    <div class="col col-sm-6 col-xs-12" >
+                        <input type="submit" class="button col col-xs-6" value="Take Off">
+                        <input type="button" class="button col col-xs-6" value="Start Over">
+                    </div>
+                </div>    
+        </form>
+    </div>
 </div>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 </body>
 
