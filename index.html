@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Find Your Happy Place</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="styles/map.css" rel="stylesheet">   
     <link href="styles/main.css" rel="stylesheet">
 
 </head>
@@ -23,7 +23,7 @@
             <h1 class="landing-page-text"><span id="welcome-txt-pt1">Welcome. </span></span id="welcome-txt-pt2">Find your happy place.</span>
             </h1><span></div>
 </header>
-
+<div id="map"></div>
 <div class="landing-page">      
     <div class="container">
         <form required id="landing-page-form"> 
@@ -52,7 +52,7 @@
             <div class="row">
                     <div class="col col-sm-6 col-xs-12">
                         <select required form="landing-page-form" name="temp-select-data" class="temp-select form-control" id="temp-selection">
-                            <option value="" selected>Temp Range in Fahrenheit/Celsius Approximated</option>
+                            <option value="" selected>Temp Range in Fahrenheit/Celsius</option>
                             <option data-range-begin="-200" data-range-end="19">Arctic (19F and under/-7.2C and under)</option>
                             <option data-range-begin="20" data-range-end="32">Freezing (20F to 32F/-6.7C to 0C)</option>
                             <option data-range-begin="33" data-range-end="40">Cold (33F to 40F/0.1C to 4.4C)</option>
@@ -83,17 +83,34 @@
         </form>
     </div>
 </div>
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    <script
+        src="https://code.jquery.com/jquery-3.2.0.min.js"
+        integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
         crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    <script 
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
-    <script src="Scripts/geography.js" type="text/javascript"></script>
-    <script src="Scripts/app.js" type="text/javascript"></script>
-
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ-ZdQt9sDI8K89by3CvnDNwK9FGKCuIo&libraries=places,drawing"></script>
+    <script 
+        src="Scripts/geography.js" 
+        type="text/javascript"></script>
+    <script 
+        src="Scripts/map.js" 
+        type="text/javascript"></script>
+    <script 
+        src="Scripts/app.js" 
+        type="text/javascript"></script>
 </body>
 
 </html>
+
+<!--async defer-->
+ 
+    <!--<script async defer type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+
+<!--https://maps.googleapis.com/maps/api/js?libraries=geometry,places&ext=.js-->
+
+<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>-->
