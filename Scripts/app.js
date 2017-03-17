@@ -16,8 +16,8 @@ var happyGeography = {};
 
 
 
- $("#landing-page-form" ).on("submit", function(){
-        this.preventDefault();
+ $("#landing-page-form" ).on("submit", function(event){
+        event.preventDefault();
         
         happyData.continent=$("select#continent-selection").find(':selected').data('continent');
         happyData.rangeBegin=$("select#temp-selection").find(':selected' ).data('rangeBegin');
