@@ -3,10 +3,12 @@
  */
 'use strict';
 //play around with dynamically form, hide and show form with a toggle
-
+//maybe get a gif to come up while the map is loading?
 //talking with weather API, work with weatherAPI
+//need to learn to change the markers so that they display the percent of happiness from weather.js
 
 var Map = function (geo, idContainer) {
+
   return {
     initialize: function () {
       var map;
@@ -65,3 +67,7 @@ var Map = function (geo, idContainer) {
           '<p>Content to fill in later</p>' + '</div>'
   }
 }
+
+        //must attribute weather data to yahoo with this:
+         //<a id="yahoo" href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/> </a>
+            //var attributionElement = "<a id='yahoo' href='https://www.yahoo.com/?ilc=401' target='_blank'> <img src='https://poweredby.yahoo.com/purple.png' width='134' height='29'/> </a>";
