@@ -2,10 +2,11 @@
  * Created by Admin on 3/9/2017.
  */
 'use strict';
-//play around with dynamically form, hide and show form with a toggle
+
 //maybe get a gif to come up while the map is loading?
-//talking with weather API, work with weatherAPI
+//place yahoo attribution on google map
 //need to learn to change the markers so that they display the percent of happiness from weather.js
+//get ranking.js to dynamically fill in html for both temp range and weather select
 
 var Map = function (geo, idContainer) {
 
@@ -22,7 +23,7 @@ var Map = function (geo, idContainer) {
 
       // Display a map on the page
       map = new google.maps.Map(document.getElementById(idContainer, mapOptions));
-      console.log(idContainer);
+      
       
       map.setTilt(90);
 

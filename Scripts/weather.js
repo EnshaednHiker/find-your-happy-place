@@ -24,7 +24,7 @@ var Weather = function (geo, callback) {
                         $("#error").append("Unable to submit search to Yahoo Weather");
                     }
                 });
-            })
+            });
         }
     }
 }

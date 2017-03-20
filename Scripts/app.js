@@ -6,7 +6,8 @@ const happyData = {
             continent:"",
             rangeBegin:"",
             rangeEnd:"",
-            sunniness:""
+            bandTemp:"",
+            bandWeather:"" 
         }
 
 var happyMap ={};
@@ -19,15 +20,18 @@ var happyRanking = {};
         happyData.continent=$("select#continent-selection").find(':selected').data('continent');
         happyData.rangeBegin=$("select#temp-selection").find(':selected' ).data('rangeBegin');
         happyData.rangeEnd=$("select#temp-selection").find(':selected').data('rangeEnd');
+        happyData.bandTemp=$("select#temp-selection").find(':selected' ).data('bandTemp');
         happyData.sunniness=$("select#sunniness-selection").find(':selected').data('sunniness');
+        happyData.bandWeather=$("select#sunniness-selection").find(':selected').data('bandWeather');
         happyGeography = Geography (happyData.continent);
         
-        happyWeather = Weather (happyGeography,function(geo){
-            console.log(geo);
-            happyRanking = Ranking (geo);
-            happyMap = new Map (happyRanking, "map");
+        happyWeather = new Weather (happyGeography,function(geo){
+            
+            happyRanking = new Ranking (geo,happyData);
+            happyRanking.initialize();
+            happyMap = new Map (/*happyRanking*/geo, "map");
             happyMap.initialize();
-            console.log(happyRanking);
+            
             $("#js-place-slider").html("<input id='js-map-slider'  type='checkbox'><span></span>");
             $("#landing-page-form").slideToggle("slow");
         });

@@ -57,26 +57,29 @@
                     <div class="col col-sm-6 col-xs-12">
                         <select required form="landing-page-form" name="temp-select-data" class="temp-select form-control" id="temp-selection">
                             <option value="" selected>Temp Range in Fahrenheit/Celsius</option>
-                            <option data-range-begin="-200" data-range-end="19">Arctic (19F and under/-7.2C and under)</option>
-                            <option data-range-begin="20" data-range-end="32">Freezing (20F to 32F/-6.7C to 0C)</option>
-                            <option data-range-begin="33" data-range-end="40">Cold (33F to 40F/0.1C to 4.4C)</option>
-                            <option data-range-begin="41" data-range-end="50">Cool (41F to 50F/5C to 10C)</option>
-                            <option data-range-begin="51" data-range-end="60">Brisk (51F to 60F/10.6C to 15.5C)</option>
-                            <option data-range-begin="61" data-range-end="70">Warm (61F to 70F/16.1C to 21.1C)</option>
-                            <option data-range-begin="71" data-range-end="85">Hot (71F to 85F/21.7C to 29.4C)</option>
-                            <option data-range-begin="86" data-range-end="95">Stifling (86F to 95F/30C to 35C)</option>
-                            <option data-range-begin="96" data-range-end="200">Fry an egg (96F+/35.1C+)</option>
+                            <option data-band-temp="0" data-range-begin="-200" data-range-end="19">Arctic (19F and under/-7.2C and under)</option>
+                            <option data-band-temp="1" data-range-begin="20" data-range-end="32">Freezing (20F to 32F/-6.7C to 0C)</option>
+                            <option data-band-temp="2" data-range-begin="33" data-range-end="40">Cold (33F to 40F/0.1C to 4.4C)</option>
+                            <option data-band-temp="3" data-range-begin="41" data-range-end="50">Cool (41F to 50F/5C to 10C)</option>
+                            <option data-band-temp="4" data-range-begin="51" data-range-end="60">Brisk (51F to 60F/10.6C to 15.5C)</option>
+                            <option data-band-temp="5" data-range-begin="61" data-range-end="70">Warm (61F to 70F/16.1C to 21.1C)</option>
+                            <option data-band-temp="6" data-range-begin="71" data-range-end="85">Hot (71F to 85F/21.7C to 29.4C)</option>
+                            <option data-band-temp="7" data-range-begin="86" data-range-end="95">Stifling (86F to 95F/30C to 35C)</option>
+                            <option data-band-temp="8" data-range-begin="96" data-range-end="200">Fry an egg (96F+/35.1C+)</option>
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col col-sm-6 col-xs-12">
-                        <select required form="landing-page-form" name="sunniness-select-data" class="sun-select form-control" id="sunniness-selection">
-                            <option value="" selected>Sunniness</option>
-                            <option data-sunniness="32">Sunny</option>
-                            <option data-sunniness="30">Partly Cloudy</option>
-                            <option data-sunniness="28">Mostly Cloudy</option>
-                            <option data-sunniness="26">Cloudy</option>
+                        <select required form="landing-page-form" name="weather-select-data" class="weather-select form-control" id="weather-selection">
+                            <option value="" selected>Weather</option>
+                            <option data-band-weather="0">Sunny</option>
+                            <option data-band-weather="1">Snowy</option>
+                            <option data-band-weather="2">Windy</option>
+                            <option data-band-weather="3">Rain and/or Thunder</option>
+                            <option data-band-weather="4">Obscured (Dust/Fog/Haze/Smoke)</option>
+                            <option data-band-weather="5">Cloudy</option>
+                            <option data-band-weather="6">Acts of God (Tornado,Hurricane,Tropical Storm</option>
                         </select>
                     </div>
                     <div class="col col-sm-6 col-xs-12" >
@@ -110,6 +113,7 @@
         src="Scripts/geography.js" 
         type="text/javascript"></script>
     <script src="Scripts/weather.js" type="text/javascript"></script>
+    <script src="Scripts/ranking.js" type="text/javascript"></script>
     <script 
         src="Scripts/map.js" 
         type="text/javascript"></script>
