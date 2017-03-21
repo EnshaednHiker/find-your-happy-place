@@ -1,62 +1,59 @@
  html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: url("sky.jpg");
-    background-size: cover;
-    
-}
-
-.landing-page-text {
-    color: white;
-}
-.landing-page .button {
-    background-color: grey;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    width: 48%;
-    margin-top: 0.75%;
-    margin-right: 1%;
-    margin-left: 1%;
-    
-}
-
-.landing-page {
-    position: absolute;
-    bottom: 15px;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    z-index: 100;
-    
-}
-#landing-page-form {
-    z-index: 100;
-}
-.landing-page .row{
-    padding-top: 10px;
-    
-}
-.landing-page .row .form-control {
-    height: 50px;
-}
-
-.hidden {
-    display: none !important;
-}
-
-#toggle-div{
-    z-index: 100;
-    display: inline-block;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-
-
+ body {
+     height: 100%;
+     margin: 0;
+     padding: 0;
+     background-image: url("sky.jpg");
+     background-size: cover;
+ }
+ 
+ .landing-page-text {
+     color: white;
+ }
+ 
+ .landing-page .button {
+     background-color: grey;
+     border: none;
+     border-radius: 5px;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     width: 48%;
+     margin-top: 0.75%;
+     margin-right: 1%;
+     margin-left: 1%;
+ }
+ 
+ .landing-page {
+     position: absolute;
+     bottom: 15px;
+     text-align: center;
+     margin: 0 auto;
+     width: 100%;
+     z-index: 100;
+ }
+ 
+ #landing-page-form {
+     z-index: 100;
+ }
+ 
+ .landing-page .row {
+     padding-top: 10px;
+ }
+ 
+ .landing-page .row .form-control {
+     height: 50px;
+ }
+ 
+ .hidden {
+     display: none !important;
+ }
+ 
+ #toggle-div {
+     z-index: 100;
+     display: inline-block;
+     margin-right: auto;
+     margin-left: auto;
+ }

@@ -5,8 +5,18 @@
         top: 0;
         left: 0;
         z-index: 99;
-        }
+}
 
+.attribution {
+        z-index: 101;
+        bottom: 0;
+        position: fixed !important;
+}
 
+#yahoo {
+        left: 68px;
+}
 
-       
+#icon {
+        left: 204px;
+}
