@@ -7,7 +7,7 @@
         z-index: 99;
 }
 
-.attribution {
+.attribution  {
         z-index: 101;
         bottom: 0;
         position: fixed !important;

@@ -602,7 +602,7 @@ Slider B Sizes
 /*******************************************************
 Slider B-flat
 *******************************************************/
-.checkbox-slider--b-flat {
+.checkbox-slider--b-flat  {
   position: relative;
 }
 .checkbox-slider--b-flat input[type="checkbox"] {
