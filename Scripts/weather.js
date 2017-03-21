@@ -21,7 +21,8 @@ var Weather = function (geo, callback) {
                     error: function (XHR) {
                         //display message that the user knows something went wrong on Yahoo Weather's end and couldn't return anything
                         console.log(XHR);
-                        $("#error").append("Unable to submit search to Yahoo Weather");
+                        window.alert("Unable to submit search to Yahoo Weather. Try to resubmit again.");
+                        location.reload();
                     }
                 });
             });
