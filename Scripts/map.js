@@ -35,8 +35,7 @@ var Map = function (geo, idContainer) {
 
       // Display a map on the page
       map = new google.maps.Map(document.getElementById(idContainer, mapOptions));
-
-
+      
       map.setTilt(90);
 
       // Multiple Markers passed into the function

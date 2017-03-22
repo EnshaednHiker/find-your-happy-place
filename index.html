@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Find Your Happy Place</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
     <link href="Styles/titatoggle-dist.css" rel="stylesheet"> 
-    <link href="Styles/weather.css" rel="stylesheet">
+    <link href="Styles/weather.css" rel="stylesheet"> 
     <link href="Styles/map.css" rel="stylesheet"> 
     <link href="Styles/main.css" rel="stylesheet"> 
 
@@ -21,8 +22,10 @@
 
 <body>
     <header class="container">
-        <div class="row justify-content-md-center">
-            <h1 class="landing-page-text">Welcome. Find your happy place.</h1>
+        <div id="header-box"class="col col-sm-12 col-xs-12 col-md-12 col-lg-6">
+            <div class="row justify-content-md-center">
+                <h1 class="landing-page-text">Welcome. Find your happy place.</h1>
+            </div>
         </div>
     </header>
 <div id="map"></div>
@@ -30,10 +33,10 @@
     <div class="container">
         <form required id="landing-page-form"> 
             <div class="row">
-                <div class="col col-sm-6 col-xs-12">
+                <div class="col col-sm-6 col-xs-12" >
                     <label class="landing-page-text" for="Happy Place Criteria">Where you want to go, to your heart's content.</label>
                     <select required form="landing-page-form" id="continent-selection" name="continent-select-data" class="continent-select form-control">
-                        <option value="" selected>Choose a continent</option>
+                        <option value="" disabled selected>Choose a continent</option>
                         <option data-continent="North America">North America</option>
                         <option data-continent="South America">South America</option>
                         <option data-continent="Europe">Europe</option>
@@ -48,7 +51,7 @@
             <div class="row">
                     <div class="col col-sm-6 col-xs-12">
                         <select required form="landing-page-form" name="temp-select-data" class="temp-select form-control" id="temp-selection">
-                            <option value="" selected>Temp Range in Fahrenheit/Celsius</option>
+                            <option disabled  value="" selected>Temp Range in Fahrenheit/Celsius</option>
                             <option data-band-temp="0" data-range-begin="-200" data-range-end="19">Arctic (19F and under/-7.2C and under)</option>
                             <option data-band-temp="1" data-range-begin="20" data-range-end="32">Freezing (20F to 32F/-6.7C to 0C)</option>
                             <option data-band-temp="2" data-range-begin="33" data-range-end="40">Cold (33F to 40F/0.1C to 4.4C)</option>
@@ -64,14 +67,14 @@
                 <div class="row">
                     <div class="col col-sm-6 col-xs-12">
                         <select required form="landing-page-form" name="weather-select-data" class="weather-select form-control" id="weather-selection">
-                            <option value="" selected>Weather</option>
+                            <option value="" disabled selected>Weather</option>
                             <option data-band-weather="0">Sunny</option>
                             <option data-band-weather="1">Snowy</option>
                             <option data-band-weather="2">Windy</option>
                             <option data-band-weather="3">Rain and/or Thunder</option>
                             <option data-band-weather="4">Obscured (Dust/Fog/Haze/Smoke)</option>
                             <option data-band-weather="5">Cloudy</option>
-                            <option data-band-weather="6">Acts of God (Tornado,Hurricane,Tropical Storm</option>
+                            <option data-band-weather="6">Acts of God (Tornado/Hurricane/Tropical Storm)</option>
                         </select>
                     </div>
                     <div class="col col-sm-6 col-xs-12" >
