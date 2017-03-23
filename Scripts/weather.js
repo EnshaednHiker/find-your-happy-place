@@ -1,5 +1,5 @@
 /**
- * Created by Admin on 3/9/2017.
+ * Second stop for the data. Here we pick up forecast data from Yahoo Weather.
  */
 
 var Weather = function (geo, callback) {

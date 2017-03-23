@@ -7,8 +7,10 @@
  */
 
 
-/* Create object factory that either takes a continent for an argument 
-and returns only locations from that continent or take any argument other than those six inhabitable continents and returns all locations */
+/* An object factory that either takes a continent for an argument 
+and returns only locations from that continent or take any argument other than those six inhabitable continents and returns all locations
+This is the first stop from the landing page.
+ */
 var Geography = function (continent) {
 
     var geographyPlaces = [{

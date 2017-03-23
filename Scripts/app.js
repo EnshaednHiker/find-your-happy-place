@@ -1,5 +1,5 @@
 /**
- * Created by Admin on 3/9/2017.
+ * App.js calls each portion each of the other js files and listens for button clicks on the landing page
  */
 
 const happyData = {

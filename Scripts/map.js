@@ -13,9 +13,9 @@ Some icons are derived from the project User Interface Design Framework (http://
  */
 'use strict';
 
-
-
 //get ranking.js to dynamically fill in html for both temp range and weather select
+
+
 
 var Map = function (geo, idContainer) {
 

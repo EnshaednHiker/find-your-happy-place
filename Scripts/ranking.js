@@ -1,8 +1,11 @@
+//Third stop for the data.  Here we rank the data according to the following.
+
 var Ranking = function (geo, data) {
 
     return {
         initialize: function () {
 
+            //Yahoo weather lumps weather under certain codes.  Code dedinitions can be found here: https://developer.yahoo.com/weather/documentation.html
             var weatherMap = {
                 "0": {
                     "yahooWeatherCodes": [31, 32, 33, 34, 29, 30, 44],
@@ -86,6 +89,8 @@ var Ranking = function (geo, data) {
                 }
             }
 
+            //The difference between the the selected band temp and the forecast band temp denotes what score is given. If there is no difference, 0,
+            //then a max score of 10 is added for that day, and so on.
             var tempScores = {
                 "0": 10,
                 "1": 9,
@@ -98,6 +103,7 @@ var Ranking = function (geo, data) {
                 "8": 2
             }
 
+            //weather is scored based on whether the that weather type is absent or present. If present, 10 point are added for that day
             var weatherScores = {
                 "presentWeather": 10,
                 "absentWeather": 0
@@ -123,11 +129,9 @@ var Ranking = function (geo, data) {
 
                 e.forecast.forEach(function (f) {
 
-                    //how do we calc band of current forecast and difference with what they chose, probably a one liner
+                    
                     forecastRangeBand = keyedRanges.filter(function (range) {
-                        //tempRanges[range]
-                        //this is where we would return a condintional where if true we would get that range i.e. confirms f.high and f.low is within the ranges
-                        //have a onliner cond. return true if it's in the tempRanges' range
+                        
                         return f.high <= tempRanges[range].max && f.high >= tempRanges[range].min;
                     })[0];
 
