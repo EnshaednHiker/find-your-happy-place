@@ -20,28 +20,28 @@ Landing page showing three dropdown menus and two buttons.
 
 ![selecting continent](screenshots/continent-select.PNG)
 
-    1. Select which continent you want to limit your search to.
+Select which continent you want to limit your search to.
 
 ![selecting temperature](screenshots/temp-select.PNG)
 
-    2. Select temperature band.
+Select temperature band.
 
 ![selecting weather](screenshots/weather-select.PNG)
 
-    3. Select weather type.
+Select weather type.
 
 ![all criteria selected](screenshots/criteria-selected.PNG)
 
-    4. With all three criteria selected, click "Take Off."
+With all three criteria selected, click "Take Off."
 
 ![results](screenshots/result-toggled.PNG)
 
-    5. All results show up on numbered markers denoting the rank of each location. The higher the rank, the better the match.
+All results show up on numbered markers denoting the rank of each location. The higher the rank, the better the match.
 
 ![menu revealed](screenshots/result-not-hidden.PNG)
 
-    6. Click the white toggle button to reveal the menu. Select new criteria to search again.
+Click the white toggle button to reveal the menu. Select new criteria to search again.
 
 ![infowindow](screenshots/infowindow-result.PNG)
 
-    7. Clicking on a marker reveals some stats and the 10-day forecast for that city.
+Clicking on a marker reveals some stats and the 10-day forecast for that city.
