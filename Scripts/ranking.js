@@ -113,7 +113,7 @@ var Ranking = function (geo, data) {
             var forecastRangeBand;
             var keyedWeather = Object.keys(weatherMap);
 
-
+            //loops through each city adding rank object that will later be manipulated
             geo.forEach(function (e) {
                 e["ranking"] = {
                     "total": (tempScores[0] * geo[0].forecast.length) + (weatherScores.presentWeather * geo[0].forecast.length),
@@ -127,11 +127,12 @@ var Ranking = function (geo, data) {
                 bandDifferenceTemp = 0;
                 bandDifferenceTempAbs = 0;
 
+                //each city loops through each forecast day and scores each day according to what was forecast and what was selected
                 e.forecast.forEach(function (f) {
 
-                    
+
                     forecastRangeBand = keyedRanges.filter(function (range) {
-                        
+
                         return f.high <= tempRanges[range].max && f.high >= tempRanges[range].min;
                     })[0];
 

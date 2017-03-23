@@ -35,7 +35,7 @@ var Map = function (geo, idContainer) {
 
       // Display a map on the page
       map = new google.maps.Map(document.getElementById(idContainer, mapOptions));
-      
+
       map.setTilt(90);
 
       // Multiple Markers passed into the function
@@ -54,7 +54,7 @@ var Map = function (geo, idContainer) {
           title: e.placeName
         });
         e.infoWindow = new google.maps.InfoWindow({
-          
+
           content: generateInfoContent(e)
         });
 
@@ -63,7 +63,7 @@ var Map = function (geo, idContainer) {
           if (active) {
             active.infoWindow.close();
           }
-          
+
           e.infoWindow.open(map, e.marker);
           active = e;
         }));
@@ -77,7 +77,7 @@ var Map = function (geo, idContainer) {
 
   //generates infowindow content
   function generateInfoContent(marker) {
-    
+
     var counter = 1;
     var content = '<div class="info_content">' +
       '<h3>' + marker.placeName + '</h3>' +
