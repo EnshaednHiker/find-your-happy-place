@@ -10,7 +10,7 @@
 .attribution  {
         z-index: 101;
         bottom: 0;
-        position: fixed !important;
+        position: fixed;
 }
 
 #yahoo {

@@ -10,6 +10,10 @@ var Weather = function (geo, callback) {
             geo.forEach(function (e) {
                 $.ajax("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D%22" + e.woeid + "%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys", {
                     success: function (data) {
+                        if (data==null){
+                           window.alert("Yahoo Weather didn't return any information. Try to resubmit again.");
+                           location.reload(); 
+                        }
                         //now we need call function and pass data that knows how to render above
                         //thumbnail
                         e["forecast"] = data.query.results.channel.item.forecast;

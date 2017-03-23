@@ -77,7 +77,7 @@ var Map = function (geo, idContainer) {
   };
 
   function generateInfoContent(marker) {
-    console.log(marker);
+    
     var counter = 1;
     var content = '<div class="info_content">' +
       '<h3>' + marker.placeName + '</h3>' +
