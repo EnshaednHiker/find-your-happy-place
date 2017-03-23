@@ -54,8 +54,7 @@ var Map = function (geo, idContainer) {
           title: e.placeName
         });
         e.infoWindow = new google.maps.InfoWindow({
-          //consider abstracting the markup generation to its own function because we want to display a lot of stuff
-          //happiness ranking, weather icons
+          
           content: generateInfoContent(e)
         });
 
@@ -64,7 +63,7 @@ var Map = function (geo, idContainer) {
           if (active) {
             active.infoWindow.close();
           }
-          //infoWindow.setContent();//e.infoWindowContent);
+          
           e.infoWindow.open(map, e.marker);
           active = e;
         }));
@@ -76,6 +75,7 @@ var Map = function (geo, idContainer) {
     }
   };
 
+  //generates infowindow content
   function generateInfoContent(marker) {
     
     var counter = 1;
